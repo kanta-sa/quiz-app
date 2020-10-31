@@ -1,0 +1,10 @@
+<header>
+  テスト/<%= @level.name %>
+</header>
+
+<!--ここの部分をjavascriptで管理する-->
+<% @questions.each do |question| %>
+  <%= question.content %>
+<% end %>
+
+<%= link_to "諦める", test_index_path, data: { confirm: "本当に離脱しますか？" }, class: "nav-link btn btn-blue" %>

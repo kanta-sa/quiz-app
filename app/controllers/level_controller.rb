@@ -1,5 +1,6 @@
 class LevelController < ApplicationController
   def question
-    # @questions =
+    @level = Level.find_by(id: params[:id])
+    @questions = @level.questions
   end
 end
