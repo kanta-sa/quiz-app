@@ -1,9 +1,14 @@
+<header>
+  TOP
+</header>
 <% unless user_signed_in? %>
-  <div>
-    <%= link_to "ログイン", new_user_session_path, class: "nav-link login-btn" %>
-  </div>
-  <div>
-    <%= link_to "新規登録", new_user_registration_path, class: "nav-link login-btn" %>
+  <div class="top-btn-wrapper">
+    <div>
+      <%= link_to "ログイン", new_user_session_path, class: "nav-link btn btn-blue" %>
+    </div>
+    <div>
+      <%= link_to "新規登録", new_user_registration_path, class: "nav-link btn btn-blue" %>
+    </div>
   </div>
 <% else %>
   <%= current_user.username %>

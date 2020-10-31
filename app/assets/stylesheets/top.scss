@@ -1,3 +1,44 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.adjust-screen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.screen-area {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 592px;
+  max-width: 432px;
+  padding: 0;
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// top/ログイン前
+.nav-link {
+  text-decoration: none;
+}
+
+.btn {
+  color: white;
+  padding: 2% 4%;
+}
+
+.btn-blue {
+  background-color: blue;
+}
+
+.top-btn-wrapper {
+  margin: 50% 10%;
+  & > div {
+    margin: 10% auto;
+    text-align: center;
+  }
+}
+

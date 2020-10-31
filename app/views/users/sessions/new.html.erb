@@ -1,26 +1,23 @@
-<h2>Log in</h2>
+<header>
+  ログイン
+</header>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="form-container">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-field">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form" %>
+    </div>
+    <div class="form-field">
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "form" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="form-btn-wrapper">
+      <%= f.submit "ログインする", class: "btn form-btn btn-blue" %>
     </div>
   <% end %>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+<div class="help-link-wrapper">新規登録は<%= link_to "こちら", new_user_registration_path, class: "help-link nav-link" %></div>
 
-<%= render "users/shared/links" %>
