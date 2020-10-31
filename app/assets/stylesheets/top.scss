@@ -42,3 +42,21 @@
   }
 }
 
+// top/ログイン後
+.category-btn-wrapper {
+  margin: 25% 20%;
+  .top {
+    margin: 3% auto 25%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom {
+    text-align: center;
+  }
+}
+
+.category-btn {
+  color: black;
+  border: 1px solid black;
+  padding: 10% 10%;
+}

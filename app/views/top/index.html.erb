@@ -11,7 +11,13 @@
     </div>
   </div>
 <% else %>
-  <%= current_user.username %>
-  <%= current_user.email %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: "delete", class: "nav-link" %>
+  <div class="category-btn-wrapper">
+    <div class="top">
+      <a href="#" class="nav-link category-btn">テスト</a>
+      <a href="#" class="nav-link category-btn">単語帳</a>
+    </div>
+    <div class="bottom">
+      <a href="#" class="nav-link category-btn">ランキング</a>
+    </div>
+  </div>
 <% end %>
