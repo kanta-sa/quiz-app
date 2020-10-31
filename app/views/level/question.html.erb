@@ -3,8 +3,15 @@
 </header>
 
 <!--ここの部分をjavascriptで管理する-->
-<% @questions.each do |question| %>
-  <%= question.content %>
-<% end %>
+<div class="">
+  <% @questions.each do |question| %>
+    <div class="">
+      <%= question.content %>
+      <% question.choices.each do |choice| %>
+        <p><%= choice.content %></p>
+      <% end  %>
+    </div>
+  <% end %>
+</div>
 
 <%= link_to "諦める", test_index_path, data: { confirm: "本当に離脱しますか？" }, class: "nav-link btn btn-blue" %>
