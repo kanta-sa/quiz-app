@@ -1,0 +1,19 @@
+.level-container {
+  margin-top: 10%;
+}
+
+.level-wrapper {
+  margin: 4% 0;
+  .level-name {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+  .radius-btn-wrapper {
+    text-align: center;
+    .radius-btn {
+      border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+    }
+  }
+}

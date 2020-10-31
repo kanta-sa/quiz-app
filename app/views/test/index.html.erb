@@ -1,2 +1,16 @@
-<h1>Test#index</h1>
-<p>Find me in app/views/test/index.html.erb</p>
+<header>
+  テスト
+</header>
+
+<div class="level-container">
+  <% @level.each do |level| %>
+    <div class="level-wrapper">
+      <div class="level-name">
+        <%= level.name %>
+      </div>
+      <div class="radius-btn-wrapper">
+        <%= link_to "スタート", question_level_path(level), class: "nav-link btn radius-btn btn-blue" %>
+      </div>
+    </div>
+  <% end %>
+</div>

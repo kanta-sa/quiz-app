@@ -6,5 +6,23 @@ Rails.application.routes.draw do
     :sessions => 'users/sessions'
   }
 
-  resources :test, only: :index
+  resources :test, only: :index do
+    collection do
+      resources :level do
+        member do
+          get :question
+        end
+      end
+    end
+  end
+
+  # resources :rank, only: :index do
+  #   collection do
+  #     resources :level do
+  #       member do
+  #         get :ranking
+  #       end
+  #     end
+  #   end
+  # end
 end

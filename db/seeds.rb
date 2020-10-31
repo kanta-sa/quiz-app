@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# レベルのモデル
+level = (1..3).map do |i|
+  l = {
+    name: "レベル#{i}"
+  }
+  l
+end
+Level.create!(level)
