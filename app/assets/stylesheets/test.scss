@@ -34,6 +34,49 @@
 //  display: none;
 //}
 
+/* クイズのすべてを管理する親要素 */
+.quiz_area{
+  position: relative;
+  margin: 2%;
+}
+
+/* 現在の問題数を表示 */
+.quiz_area .quiz_no{
+  font-weight: bold;
+}
+
+/* 問題文 */
+.quiz_area .quiz_question{
+  box-sizing: border-box;
+  padding: 15px;
+  border: 4px solid #CCC;
+  font-weight: bold;
+}
+
+/* 以下クイズの選択肢のデザイン */
+.quiz_area .quiz_ans_area ul{
+  margin: 10px 0 0 0;
+  padding: 0;
+  display: block;
+}
+
+.quiz_area .quiz_ans_area ul::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.quiz_area .quiz_ans_area ul li{
+  box-sizing: border-box;
+  list-style: none;
+  float: left;
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #CCC;
+  margin: 0 0 -2px 0;
+  cursor: pointer;
+}
+
 /* 回答後に上に被せてタップできなくするための要素（デフォルト非表示、回答後に一時的に表示） */
 .quiz_area .quiz_area_bg{
   position: absolute;
@@ -79,4 +122,8 @@
 .quiz_area .quiz_area_icon.false:before{
   content: '×';
   color: blue;
+}
+
+#retire {
+  margin: 5%;
 }

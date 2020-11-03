@@ -19,7 +19,9 @@
   <div class="quiz_result"></div>
 </div>
 
-<%= link_to "諦める", test_index_path, data: { confirm: "本当に離脱しますか？" }, class: "nav-link btn btn-blue" %>
+<div id="retire">
+  <%= link_to "諦める", test_index_path, data: { confirm: "本当に離脱しますか？" }, class: "nav-link btn btn-blue" %>
+</div>
 
 <script type="text/javascript">
 $(function(){
@@ -138,6 +140,7 @@ $(function(){
     }
     quizArea.find('.quiz_result').html(text);
     quizArea.find('.quiz_result').show();
+    $('#retire').hide();
   }
 });
 </script>
