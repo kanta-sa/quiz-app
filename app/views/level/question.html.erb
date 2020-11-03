@@ -3,15 +3,137 @@
 </header>
 
 <!--ここの部分をjavascriptで管理する-->
-<div class="">
+<!--<div id="cnt-question"><%#= @questions.length %></div>-->
+
+
+
+<input type="hidden" id="cnt-question" value="<%= @questions.length %>">
+<div id="question-wrapper">
+  <% cnt = 1 %>
   <% @questions.each do |question| %>
-    <div class="">
-      <%= question.content %>
-      <% question.choices.each do |choice| %>
-        <p><%= choice.content %></p>
-      <% end  %>
+    <div class="question negative" id="question-no-<%= cnt %>">
+      <div class="question-value">
+        <%= question.content %>
+      </div>
+      <div>
+        <% question.choices.each do |choice| %>
+          <% if choice.is_answer %>
+            <input type="hidden" id="question-no-<%= cnt %>-answer" value="<%= choice.content %>">
+          <% end %>
+          <button type="button" class=""><%= choice.content %></button>
+        <% end  %>
+      </div>
     </div>
+    <% cnt += 1 %>
   <% end %>
 </div>
 
+<input type="button" id="next-btn" value="次へ">
+
 <%= link_to "諦める", test_index_path, data: { confirm: "本当に離脱しますか？" }, class: "nav-link btn btn-blue" %>
+
+<script type="text/javascript">
+  // const quizLength = parseInt(document.getElementById("cnt-question").textContent, 10);
+  var quizLength = parseInt(document.getElementById("cnt-question").value, 10);
+  console.log(typeof(quizLength));
+
+  var quizIndex = 1;
+  var score = 0;
+  console.log("start");
+  function setupQuiz(index){
+    var question = document.getElementById(`question-no-${index}`);
+    question.style.display = "block";
+    var choices = question.lastElementChild;
+    // let ans = document.getElementById(`question-no-${index}-answer`);
+    // choices.removeChild(ans);
+    // return {answer: ans.value, choices: choices}
+    return choices
+  }
+
+  function selfRemoveChild(){
+    var tmp = document.getElementById(`question-no-${quizIndex}-answer`);
+    choices.removeChild(tmp);
+    return tmp.value
+  }
+
+  function clickHandler(e, answer){
+    console.log(`答えは${answer}!`);
+    if(answer === e.target.textContent){
+      window.alert("正解");
+      score++;
+    }
+    else{
+      window.alert("不正解");
+    }
+    var test = document.getElementById(`question-no-${quizIndex}`);
+    test.style.display = "none";
+
+    quizIndex++;
+    if(quizIndex <= quizLength){
+      return true;
+    }
+    else{
+      window.alert("終了！あなたの正解数は"+score+"/"+quizLength+"です。")
+    }
+  }
+
+  var choices = setupQuiz(quizIndex);
+  var answer = selfRemoveChild();
+  // choices.removeChild(answer);
+  // answer = answer.value;
+  // console.log(choices.children.length)
+  // console.log(answer)
+
+  // const nextBtn = document.getElementById("next-btn");
+
+  // var handlerIndex = 0;
+
+  // while(handlerIndex < choices.children.length){
+  //   console.log("check")
+  //   choices.children[handlerIndex].addEventListener('click', function(e){
+  //     if(clickHandler(e, answer)){
+  //       choices = setupQuiz(quizIndex);
+  //       answer = selfRemoveChild();
+  //       // choices.removeChild(answer);
+  //       // answer = answer.value;
+  //       console.log(score);
+  //       console.log(answer)
+  //       console.log(choices);
+  //       console.log(quizIndex);
+  //
+  //     }
+  //   });
+  //   console.log(handlerIndex);
+  //   handlerIndex++;
+  // }
+
+  for(let i=0; i<choices.children.length; i++){
+    console.log('check');
+    (function(n){
+      choices.children[n].addEventListener('click', function(e){
+        if(clickHandler(e, answer)){
+          choices = setupQuiz(quizIndex);
+          answer = selfRemoveChild();
+          // choices.removeChild(answer);
+          // answer = answer.value;
+          console.log(score);
+          console.log(answer)
+          console.log(choices);
+          console.log(quizIndex);
+        }
+      })
+    })(i);
+  }
+
+  console.log("last");
+
+  // nextBtn.addEventListener('click', function(){
+  //   let test = document.getElementById(`question-no-${quizIndex}`);
+  //   test.style.display = "none";
+  //   quizIndex += 1;
+  //   setupQuiz(quizIndex);
+  //   if(quizIndex === quizLength){
+  //     nextBtn.style.display = "none";
+  //   }
+  // });
+</script>
