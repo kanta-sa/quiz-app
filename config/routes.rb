@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :rank, only: :index do
+  resources :ranks, only: :index do
     collection do
       resources :level do
         member do
