@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     :sessions => 'users/sessions'
   }
 
-  resources :test, only: :index do
+  resources :tests, only: :index do
     collection do
       resources :level do
         member do
