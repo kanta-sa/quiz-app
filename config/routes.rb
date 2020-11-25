@@ -11,12 +11,13 @@ Rails.application.routes.draw do
       resources :level do
         member do
           get :question
+          resources :ranks, only: [:create, :update]
         end
       end
     end
   end
 
-  resources :ranks, only: :index do
+  resources :rankings, only: :index do
     collection do
       resources :level do
         member do
