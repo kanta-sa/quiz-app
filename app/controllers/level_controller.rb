@@ -12,6 +12,8 @@ class LevelController < ApplicationController
 
   def ranking
     @level = Level.find_by(id: params[:id])
-    @ranks = Rank.where(level_id: @level.id)
+    @ranks = Rank.where(level_id: @level.id).order(score: "DESC")
+    @owner = @ranks.find_by(user_id: current_user.id)
+    @own_rank = @ranks.index(@owner) + 1
   end
 end

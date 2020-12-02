@@ -21,8 +21,15 @@ CSV.foreach('db/csv/question.csv') do |row|
   Choice.create!(content: choice_content, is_answer: choice_bool, question_id: question_id)
 end
 
-User.create!(username: 'ユーザー1',
-             email: 'user1@example.com',
-             password: 'password',
-             password_confirmation: 'password'
-)
+CSV.foreach('db/csv/words.csv') do |row|
+
+end
+
+(1..3).map do |i|
+  User.create!(username: "ユーザー#{i}",
+               email: "user#{i}@example.com",
+               password: 'password',
+               password_confirmation: 'password'
+  )
+end
+

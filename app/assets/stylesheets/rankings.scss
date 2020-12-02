@@ -1,3 +1,29 @@
-// Place all the styles related to the Rankings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.owner-rank-wrapper{
+  margin: 3% 0;
+  .owner-rank-content{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 2% 3%;
+  }
+}
+
+.user_name{
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.ranking-wrapper{
+  margin-top: 5%;
+  .ranking-content{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 2% 3%;
+  }
+  .ranking-content + .ranking-content{
+    border-top: none;
+  }
+}
