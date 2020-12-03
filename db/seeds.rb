@@ -1,12 +1,17 @@
 require 'csv'
 
 # 使用するデータ(CSVファイルの列)を指定
+# テスト用
 CSVROW_LEVELID = 1
 CSVROW_LEVELNAME = 2
 CSVROW_QUESTIONID = 3
 CSVROW_QUESTIONCONTENT = 4
 CSVROW_CHOICECONTENT = 5
 CSVROW_CHOICEBOOL = 6
+
+# 単語帳用
+CSVROW_SUBJECT = 2
+CSVROW_MEANING = 3
 
 CSV.foreach('db/csv/question.csv') do |row|
   level_id = row[CSVROW_LEVELID]
@@ -21,8 +26,13 @@ CSV.foreach('db/csv/question.csv') do |row|
   Choice.create!(content: choice_content, is_answer: choice_bool, question_id: question_id)
 end
 
-CSV.foreach('db/csv/words.csv') do |row|
 
+CSV.foreach('db/csv/words.csv') do |row|
+  level_id = row[CSVROW_LEVELID]
+  subject = row[CSVROW_SUBJECT]
+  meaning = row[CSVROW_MEANING]
+
+  Word.create!(subject: subject, meaning: meaning, level_id: level_id)
 end
 
 (1..3).map do |i|
@@ -33,3 +43,6 @@ end
   )
 end
 
+(1..3).map do |i|
+  Level.find_or_create_by(name: "レベル#{i}")
+end

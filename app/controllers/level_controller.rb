@@ -16,4 +16,9 @@ class LevelController < ApplicationController
     @owner = @ranks.find_by(user_id: current_user.id)
     @own_rank = @ranks.index(@owner) + 1
   end
+
+  def word
+    @level = Level.find_by(id: params[:id])
+    @words = Word.where(level_id: @level.id)
+  end
 end

@@ -26,4 +26,14 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :words, only: :index do
+    collection do
+      resources :level do
+        member do
+          get :word
+        end
+      end
+    end
+  end
 end

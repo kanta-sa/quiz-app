@@ -1,0 +1,69 @@
+<header>
+  単語帳/<%= @level.name %>
+</header>
+
+<div class="right">
+  <%= link_to words_path do %>
+    <i class="fas fa-times"></i>
+  <% end %>
+</div>
+
+<div class="word-container">
+  <% cnt = @words.length %>
+  <% @words.each_with_index do |word, i| %>
+    <div class="word-wrapper" id="slide-<%= i %>">
+      <div>
+        <%= i+1 %>/<%= cnt %>
+      </div>
+      <div class="word-subject">
+        <%= word.subject %>
+      </div>
+      <div class="word-meaning">
+        <%= word.meaning %>
+      </div>
+    </div>
+  <% end %>
+  <div class="word-btn">
+    <div id="left-btn">
+      <i class="fas fa-angle-left"></i>
+    </div>
+    <div id="right-btn">
+      <i class="fas fa-angle-right"></i>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+$(function(){
+  var wordLength = $('.word-wrapper').length;
+  var i = 0
+  console.log(wordLength);
+  $('#slide-0').show();
+  $('#left-btn').css("visibility", "hidden");
+  $('#left-btn').on('click', function(){
+    $(`#slide-${i}`).hide();
+    i--
+    $(`#slide-${i}`).show();
+    if (i===0){
+      $('#left-btn').css("visibility", "hidden");
+    }
+    else{
+      $('#left-btn').css("visibility", "visible");
+      $('#right-btn').css("visibility", "visible");
+    }
+  });
+  $('#right-btn').on('click', function(){
+    $(`#slide-${i}`).hide();
+    i++
+    $(`#slide-${i}`).show();
+    if (i===wordLength-1) {
+      $('#right-btn').css("visibility", "hidden");
+    }
+    else{
+      $('#left-btn').css("visibility", "visible");
+      $('#right-btn').css("visibility", "visible");
+    }
+  });
+});
+</script>
