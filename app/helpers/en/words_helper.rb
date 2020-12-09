@@ -1,0 +1,2 @@
+module En::WordsHelper
+end

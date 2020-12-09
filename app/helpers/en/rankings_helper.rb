@@ -1,0 +1,2 @@
+module En::RankingsHelper
+end

@@ -43,6 +43,20 @@
 }
 
 // top/ログイン後
+.select-lang{
+  text-align: right;
+  margin: 1%;
+}
+
+.active{
+  color: black;
+  font-weight: bold;
+}
+
+.passive{
+  color: #999999;
+}
+
 .category-btn-wrapper {
   margin: 25% 20%;
   .top {

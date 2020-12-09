@@ -1,0 +1,16 @@
+<header>
+  TOP
+</header>
+<div class="select-lang">
+  <%= link_to "ja", root_path, class: "nav-link passive" %>  /
+  <%= link_to "en", en_top_path, class: "nav-link active" %>
+</div>
+<div class="category-btn-wrapper">
+  <div class="top">
+    <%= link_to "test", en_tests_path, class: "nav-link category-btn" %>
+    <%= link_to "wordbook", en_words_path, class: "nav-link category-btn" %>
+  </div>
+  <div class="bottom">
+    <%= link_to "raking", en_rankings_path, class: "nav-link category-btn" %>
+  </div>
+</div>

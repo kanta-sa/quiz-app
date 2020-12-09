@@ -11,6 +11,10 @@
     </div>
   </div>
 <% else %>
+  <div class="select-lang">
+    <%= link_to "ja", root_path, class: "nav-link active" %>  /
+    <%= link_to "en", en_top_path, class: "nav-link passive" %>
+  </div>
   <div class="category-btn-wrapper">
     <div class="top">
       <%= link_to "テスト", tests_path, class: "nav-link category-btn" %>

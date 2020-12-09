@@ -1,0 +1,11 @@
+<header>
+  ranking
+</header>
+
+<% @level.each do |level| %>
+  <div class="level-wrapper">
+    <div class="radius-btn-wrapper">
+      <%= link_to level.name, ranking_level_path(level), class: "nav-link btn radius-btn btn-blue" %>
+    </div>
+  </div>
+<% end %>
