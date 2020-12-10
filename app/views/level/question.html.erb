@@ -28,6 +28,7 @@
     <%= f.hidden_field :level_id, value: @level.id %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :score, id: 'score' %>
+    <%= f.hidden_field :type, value: 'ja' %>
     <%= f.submit "記録する", class: 'btn btn-blue' %>
   <% end  %>
 </div>
@@ -47,7 +48,7 @@ $(function(){
   // クイズを配列に格納する
   for(let i=0; i<questionHash.length; i++){
     let test = {} // 追加するハッシュ
-    test['question'] = questionHash[i].content
+    test['question'] = questionHash[i].content_ja
     let tmp = choiceHash[i]
     let tmpAns = []
     let t;
