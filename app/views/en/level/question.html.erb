@@ -1,0 +1,158 @@
+<header>
+  test/level<%= @level.id %>
+</header>
+
+<!--<input type="hidden" id="cnt-question" value="<%#= @questions.length %>">-->
+<div id="question" data-question="<%= @questions.to_json %>"></div>
+<div id="choice" data-choice="<%= @choices.to_json %>"></div>
+
+<div class="quiz_area">
+  <div class="quiz_set">
+    No.<span class="quiz_no">0</span>
+    <div class="quiz_question"></div>
+    <div class="quiz_ans_area">
+      <ul></ul>
+    </div>
+    <div class="quiz_area_bg"></div>
+    <div class="quiz_area_icon"></div>
+  </div>
+  <div class="quiz_result"></div>
+</div>
+
+<div id="retire">
+  <%= link_to "Retire", en_tests_path, data: { confirm: "Are you sure？" }, class: "nav-link btn btn-blue" %>
+</div>
+
+<div id="score-wrapper">
+  <%= form_with(model: @rank, local: true) do |f| %>
+    <%= f.hidden_field :level_id, value: @level.id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :score, id: 'score' %>
+    <%= f.hidden_field :type, value: 'en' %>
+    <%= f.submit "記録する", class: 'btn btn-blue' %>
+  <% end  %>
+</div>
+
+<script type="text/javascript">
+  $(function(){
+    var quizArea = $('.quiz_area');
+    var quiz_cnt = 0;
+
+    // 問題とその回答
+    var questions = document.getElementById("question");
+    var questionHash = JSON.parse(questions.getAttribute('data-question'));
+    var choices = document.getElementById("choice");
+    var choiceHash = JSON.parse(choices.getAttribute('data-choice'));
+
+    var aryQuiz = [];
+    // クイズを配列に格納する
+    for(let i=0; i<questionHash.length; i++){
+      let test = {} // 追加するハッシュ
+      test['question'] = questionHash[i].content_en
+      let tmp = choiceHash[i]
+      let tmpAns = []
+      let t;
+      let ans;
+      for(let j=0; j<tmp.length; j++){
+        t = tmp[j]
+        tmpAns.push(t.content);
+        if(t.is_answer){
+          ans = t.content;
+        }
+      }
+      test['selection'] = tmpAns;
+      test['answer'] = ans;
+      aryQuiz.push(test);
+    }
+    console.log(aryQuiz);
+
+    quizReset();
+    function quizReset(){
+      quiz_cnt = 0;
+      quizShow();
+    }
+
+    // 問題を表示する関数
+    function quizShow(){
+      //何問目かを表示
+      quizArea.find('.quiz_no').text((quiz_cnt + 1));
+      //問題文を表示
+      quizArea.find('.quiz_question').text(aryQuiz[quiz_cnt]['question']);
+      //正解の回答を取得する
+      var answer = aryQuiz[quiz_cnt]['answer'];
+      //現在の選択肢表示を削除する
+      quizArea.find('.quiz_ans_area ul').empty();
+      //問題文の選択肢をシャッフルさせる(自作関数) .concat()は参照渡し対策
+      var aryHoge = arrShuffle(aryQuiz[quiz_cnt]['selection'].concat());
+      //問題文の配列を繰り返し表示する
+      $.each(aryHoge, function(key, value){
+        var fuga = '<li>' + value + '</li>';
+        //正解の場合はdata属性を付与する
+        if(answer === value){
+          fuga = '<li data-true="1">' + value + '</li>';
+        }
+        quizArea.find('.quiz_ans_area ul').append(fuga);
+      });
+    }
+
+    //配列をシャッフルする関数
+    function arrShuffle(arr){
+      for(i = arr.length - 1; i > 0; i--){
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+      }
+      return arr;
+    }
+
+    var quiz_fin_cnt = questionHash.length; //何問で終了か設定（クイズ数以下であること）
+    var quiz_success_cnt = 0; //問題の正解数
+
+    //回答を選択した後の処理
+    quizArea.on('click', '.quiz_ans_area ul li', function(){
+      //画面を暗くするボックスを表示（上から重ねて、結果表示中は選択肢のクリックやタップを封じる
+      quizArea.find('.quiz_area_bg').show();
+      //選択した回答に色を付ける
+      $(this).addClass('selected');
+      if($(this).data('true')){
+        //正解の処理 〇を表示
+        quizArea.find('.quiz_area_icon').addClass('true');
+        //正解数をカウント
+        quiz_success_cnt++;　 //追加
+      }else{
+        //不正解の処理
+        quizArea.find('.quiz_area_icon').addClass('false');
+      }
+      setTimeout(function(){
+        //表示を元に戻す
+        quizArea.find('.quiz_ans_area ul li').removeClass('selected');
+        quizArea.find('.quiz_area_icon').removeClass('true false');
+        quizArea.find('.quiz_area_bg').hide();
+        //問題のカウントを進める
+        quiz_cnt++;
+        if(quiz_fin_cnt > quiz_cnt){ //追加
+          //次の問題を設定する
+          quizShow();
+        }else{
+          //結果表示画面を表示
+          quizResult();　 //追加
+        }
+      }, 1500);
+    });
+
+    //結果を表示する関数
+    function quizResult(){
+      quizArea.find('.quiz_set').hide();
+      var text = quiz_fin_cnt + '問中' + quiz_success_cnt + '問正解！';
+      if(quiz_fin_cnt === quiz_success_cnt){
+        text += '<br>全問正解おめでとう！';
+      }
+      quizArea.find('.quiz_result').html(text);
+      quizArea.find('.quiz_result').show();
+      $('#retire').hide();
+      $('#score').val(quiz_success_cnt);
+      $('#score-wrapper').show();
+    }
+  });
+</script>

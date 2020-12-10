@@ -3,13 +3,13 @@
 </header>
 
 <div class="level-container">
-  <% @level.each do |level| %>
+  <% @level.each_with_index do |level, i| %>
     <div class="level-wrapper">
       <div class="level-name">
-        <%= level.name %>
+        level<%= i+1 %>
       </div>
       <div class="radius-btn-wrapper">
-        <%= link_to "start", question_level_path(level), class: "nav-link btn radius-btn btn-blue" %>
+        <%= link_to "start", question_en_level_path(level), class: "nav-link btn radius-btn btn-blue" %>
       </div>
     </div>
   <% end %>
