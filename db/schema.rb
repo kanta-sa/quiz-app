@@ -28,7 +28,8 @@ ActiveRecord::Schema.define(version: 2020_12_02_143404) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.string "content"
+    t.string "content_ja"
+    t.string "content_en"
     t.integer "level_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
