@@ -61,7 +61,8 @@ ActiveRecord::Schema.define(version: 2020_12_02_143404) do
 
   create_table "words", force: :cascade do |t|
     t.string "subject"
-    t.string "meaning"
+    t.string "meaning_ja"
+    t.string "meaning_en"
     t.integer "level_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

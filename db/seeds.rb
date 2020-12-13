@@ -12,7 +12,8 @@ CSVROW_CHOICEBOOL = 7
 
 # 単語帳用
 CSVROW_SUBJECT = 2
-CSVROW_MEANING = 3
+CSVROW_MEANING_JA = 3
+CSVROW_MEANING_EN = 4
 
 CSV.foreach('db/csv/question.csv') do |row|
   level_id = row[CSVROW_LEVELID]
@@ -32,9 +33,10 @@ end
 CSV.foreach('db/csv/words.csv') do |row|
   level_id = row[CSVROW_LEVELID]
   subject = row[CSVROW_SUBJECT]
-  meaning = row[CSVROW_MEANING]
+  meaning_ja = row[CSVROW_MEANING_JA]
+  meaning_en = row[CSVROW_MEANING_EN]
 
-  Word.create!(subject: subject, meaning: meaning, level_id: level_id)
+  Word.create!(subject: subject, meaning_ja: meaning_ja, meaning_en: meaning_en, level_id: level_id)
 end
 
 (1..3).map do |i|
