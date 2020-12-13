@@ -1,0 +1,40 @@
+﻿1,1,レベル1,1,喜ぶ・喜び,be pleased / pleasure,bel,TRUE
+2,1,レベル1,1,喜ぶ・喜び,be pleased / pleasure,yaj,FALSE
+3,1,レベル1,1,喜ぶ・喜び,be pleased / pleasure,bej,FALSE
+4,1,レベル1,1,喜ぶ・喜び,be pleased / pleasure,chal,FALSE
+5,1,レベル1,2,学ぶ,learn,ghoj,TRUE
+6,1,レベル1,2,学ぶ,learn,jup,FALSE
+7,1,レベル1,2,学ぶ,learn,ghojmoH,FALSE
+8,1,レベル1,2,学ぶ,learn,Dal,FALSE
+9,1,レベル1,3,女性,female,IoD,FALSE
+10,1,レベル1,3,女性,female,be’,TRUE
+11,1,レベル1,3,女性,female,ghaj,FALSE
+12,1,レベル1,3,女性,female,ba’,FALSE
+13,1,レベル1,4,男性,male,Dun,FALSE
+14,1,レベル1,4,男性,male,IoD,TRUE
+15,1,レベル1,4,男性,male,IaD,FALSE
+16,1,レベル1,4,男性,male,nuv,FALSE
+17,1,レベル1,5,読む,read,Do’,FALSE
+18,1,レベル1,5,読む,read,Har,FALSE
+19,1,レベル1,5,読む,read,IaD,TRUE
+20,1,レベル1,5,読む,read,chal,FALSE
+21,1,レベル1,6,聞く,hear,be’,FALSE
+22,1,レベル1,6,聞く,hear,Ij,TRUE
+23,1,レベル1,6,聞く,hear,nuv,FALSE
+24,1,レベル1,6,聞く,hear,pag,FALSE
+25,1,レベル1,7,面白い,be interesting,Daj,TRUE
+26,1,レベル1,7,面白い,be interesting,bang,FALSE
+27,1,レベル1,7,面白い,be interesting,Dal,FALSE
+28,1,レベル1,7,面白い,be interesting,chup,FALSE
+29,1,レベル1,8,幸運,lucky,bIQ,FALSE
+30,1,レベル1,8,幸運,lucky,chuch,FALSE
+31,1,レベル1,8,幸運,lucky,ja’,FALSE
+32,1,レベル1,8,幸運,lucky,Do’,TRUE
+33,1,レベル1,9,信じる,believe,Del,FALSE
+34,1,レベル1,9,信じる,believe,Har,TRUE
+35,1,レベル1,9,信じる,believe,ngong,FALSE
+36,1,レベル1,9,信じる,believe,pag,FALSE
+37,1,レベル1,10,宇宙,universe,DaH,FALSE
+38,1,レベル1,10,宇宙,universe,yaj,FALSE
+39,1,レベル1,10,宇宙,universe,’u’,TRUE
+40,1,レベル1,10,宇宙,universe,bech,FALSE
