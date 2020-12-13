@@ -9,4 +9,9 @@ class En::LevelController < ApplicationController
       @rank = Rank.new
     end
   end
+
+  def word
+    @level = Level.find_by(id: params[:id])
+    @words = Word.where(level_id: @level.id)
+  end
 end

@@ -5,7 +5,7 @@
 <% @level.each do |level| %>
   <div class="level-wrapper">
     <div class="radius-btn-wrapper">
-      <%= link_to level.name, word_level_path(level), class: "nav-link btn radius-btn btn-blue" %>
+      <%= link_to "level#{level.id}", word_en_level_path(level), class: "nav-link btn radius-btn btn-blue" %>
     </div>
   </div>
 <% end %>
