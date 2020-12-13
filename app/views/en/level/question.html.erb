@@ -29,7 +29,7 @@
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :score, id: 'score' %>
     <%= f.hidden_field :type, value: 'en' %>
-    <%= f.submit "記録する", class: 'btn btn-blue' %>
+    <%= f.submit "Register", class: 'btn btn-blue' %>
   <% end  %>
 </div>
 
@@ -144,9 +144,9 @@
     //結果を表示する関数
     function quizResult(){
       quizArea.find('.quiz_set').hide();
-      var text = quiz_fin_cnt + '問中' + quiz_success_cnt + '問正解！';
+      var text = quiz_success_cnt + ' out of ' + quiz_fin_cnt + ' questions are correct!';
       if(quiz_fin_cnt === quiz_success_cnt){
-        text += '<br>全問正解おめでとう！';
+        text += '<br>Congratulations on answering all the questions correctly';
       }
       quizArea.find('.quiz_result').html(text);
       quizArea.find('.quiz_result').show();
