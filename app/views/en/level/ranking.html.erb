@@ -1,0 +1,45 @@
+<header>
+  ranking/level<%= @level.id %>
+</header>
+
+<div class="owner-rank-wrapper">
+  <div class="owner-rank-content">
+    <div class="">
+      <%= @own_rank %>
+    </div>
+    <div class="user_name">
+      <%= @owner.user.username %>
+    </div>
+    <% if @owner.score == 1 %>
+      <div class="">
+        <%= @owner.score %> point
+      </div>
+    <% else %>
+      <div class="">
+        <%= @owner.score %> points
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="ranking-wrapper">
+  <% @ranks.each_with_index do |rank, i| %>
+    <div class="ranking-content">
+      <div class="">
+        <%= i+1 %>
+      </div>
+      <div class="user_name">
+        <%= rank.user.username %>
+      </div>
+      <% if rank.score == 1 %>
+        <div class="">
+          <%= rank.score %> point
+        </div>
+      <% else %>
+        <div class="">
+          <%= rank.score %> points
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
