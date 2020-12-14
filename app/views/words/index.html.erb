@@ -2,6 +2,12 @@
   単語帳
 </header>
 
+<div class="back">
+  <%= link_to root_path, class: 'nav-link' do %>
+    <div><i class="fas fa-arrow-left"></i>戻る</div>
+  <% end %>
+</div>
+
 <% @level.each do |level| %>
   <div class="level-wrapper">
     <div class="radius-btn-wrapper">
