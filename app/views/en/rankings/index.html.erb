@@ -2,6 +2,12 @@
   ranking
 </header>
 
+<div class="back">
+  <%= link_to en_top_path, class: 'nav-link' do %>
+    <div><i class="fas fa-arrow-left"></i>back</div>
+  <% end %>
+</div>
+
 <% @level.each do |level| %>
   <div class="level-wrapper">
     <div class="radius-btn-wrapper">

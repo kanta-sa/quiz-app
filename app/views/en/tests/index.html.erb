@@ -2,6 +2,12 @@
   test
 </header>
 
+<div class="back">
+  <%= link_to en_top_path, class: 'nav-link' do %>
+    <div><i class="fas fa-arrow-left"></i>back</div>
+  <% end %>
+</div>
+
 <div class="level-container">
   <% @level.each_with_index do |level, i| %>
     <div class="level-wrapper">
