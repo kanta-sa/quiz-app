@@ -1,10 +1,10 @@
 <header>
-  test
+  Test
 </header>
 
 <div class="back">
   <%= link_to en_top_path, class: 'nav-link' do %>
-    <div><i class="fas fa-arrow-left"></i>back</div>
+    <div><i class="fas fa-arrow-left"></i> Back</div>
   <% end %>
 </div>
 
@@ -12,10 +12,10 @@
   <% @level.each_with_index do |level, i| %>
     <div class="level-wrapper">
       <div class="level-name">
-        level<%= i+1 %>
+        Level<%= i+1 %>
       </div>
       <div class="radius-btn-wrapper">
-        <%= link_to "start", question_en_level_path(level), class: "nav-link btn radius-btn btn-blue" %>
+        <%= link_to "START", question_en_level_path(level), class: "nav-link btn radius-btn btn-blue" %>
       </div>
     </div>
   <% end %>
