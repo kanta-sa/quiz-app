@@ -1,6 +1,12 @@
 <header>
-  ranking/level<%= @level.id %>
+  Ranking / Level<%= @level.id %>
 </header>
+
+<div class="back">
+  <%= link_to en_rankings_path, class: 'nav-link' do %>
+    <div><i class="fas fa-arrow-left"></i> Back</div>
+  <% end %>
+</div>
 
 <div class="owner-rank-wrapper">
   <div class="owner-rank-content">

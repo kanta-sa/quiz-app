@@ -1,17 +1,17 @@
 <header>
-  ranking
+  Ranking
 </header>
 
 <div class="back">
   <%= link_to en_top_path, class: 'nav-link' do %>
-    <div><i class="fas fa-arrow-left"></i>back</div>
+    <div><i class="fas fa-arrow-left"></i> Back</div>
   <% end %>
 </div>
 
 <% @level.each do |level| %>
   <div class="level-wrapper">
     <div class="radius-btn-wrapper">
-      <%= link_to "level#{level.id}", ranking_en_level_path(level), class: "nav-link btn radius-btn btn-blue" %>
+      <%= link_to "Level#{level.id}", ranking_en_level_path(level), class: "nav-link btn radius-btn btn-blue" %>
     </div>
   </div>
 <% end %>
