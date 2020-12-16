@@ -25,8 +25,17 @@ CSV.foreach('db/csv/question.csv') do |row|
   choice_bool = row[CSVROW_CHOICEBOOL]
 
   Level.find_or_create_by(name: level_name)
-  Question.find_or_create_by(content_ja: question_content_ja, content_en: question_content_en, level_id: level_id)
-  Choice.create!(content: choice_content, is_answer: choice_bool, question_id: question_id)
+  Question.create!(
+    content_ja: question_content_ja,
+    content_en: question_content_en,
+    level_id: level_id,
+    image: open("./db/fixtures/rails.png")
+  )
+  Choice.create!(
+    content: choice_content,
+    is_answer: choice_bool,
+    question_id: question_id
+  )
 end
 
 
@@ -36,7 +45,12 @@ CSV.foreach('db/csv/words.csv') do |row|
   meaning_ja = row[CSVROW_MEANING_JA]
   meaning_en = row[CSVROW_MEANING_EN]
 
-  Word.create!(subject: subject, meaning_ja: meaning_ja, meaning_en: meaning_en, level_id: level_id)
+  Word.create!(
+    subject: subject,
+    meaning_ja: meaning_ja,
+    meaning_en: meaning_en,
+    level_id: level_id
+  )
 end
 
 (1..3).map do |i|
