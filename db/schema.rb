@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_143404) do
+ActiveRecord::Schema.define(version: 2020_12_16_124934) do
 
   create_table "choices", force: :cascade do |t|
     t.string "content"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_143404) do
     t.integer "level_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.index ["level_id"], name: "index_questions_on_level_id"
   end
 

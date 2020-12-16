@@ -60,3 +60,7 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem "jquery-rails"
+
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'mini_magick'
