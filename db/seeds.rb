@@ -25,12 +25,19 @@ CSV.foreach('db/csv/question.csv') do |row|
   choice_bool = row[CSVROW_CHOICEBOOL]
 
   Level.find_or_create_by(name: level_name)
-  Question.create!(
+  q = Question.find_by(
     content_ja: question_content_ja,
     content_en: question_content_en,
-    level_id: level_id,
-    image: open("./db/fixtures/rails.png")
+    level_id: level_id
   )
+  if q.nil?
+    Question.create!(
+      content_ja: question_content_ja,
+      content_en: question_content_en,
+      level_id: level_id,
+      image: open("./db/fixtures/rails.png")
+    )
+  end
   Choice.create!(
     content: choice_content,
     is_answer: choice_bool,
