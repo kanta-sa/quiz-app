@@ -46,10 +46,17 @@
 }
 
 /* 問題文 */
-.quiz_area .quiz_question{
+.quiz_area .quiz_both{
   box-sizing: border-box;
-  padding: 15px;
-  border: 4px solid #CCC;
+  padding: 8px;
+  border: 2px solid #CCC;
+}
+
+.quiz_img, .quiz_question{
+  text-align: center;
+}
+
+.quiz_question {
   font-weight: bold;
 }
 
@@ -71,7 +78,7 @@
   list-style: none;
   float: left;
   width: 100%;
-  padding: 10px 15px;
+  padding: 8px 10px;
   border: 2px solid #CCC;
   margin: 0 0 -2px 0;
   cursor: pointer;

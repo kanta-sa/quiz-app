@@ -8,8 +8,10 @@
 <div class="quiz_area">
   <div class="quiz_set">
     第<span class="quiz_no">0</span>問
-    <div class="quiz_img"></div>
-    <div class="quiz_question"></div>
+    <div class="quiz_both">
+      <div class="quiz_img"></div>
+      <div class="quiz_question"></div>
+    </div>
     <div class="quiz_ans_area">
       <ul></ul>
     </div>
@@ -78,12 +80,11 @@ $(function(){
     //何問目かを表示
     quizArea.find('.quiz_no').text((quiz_cnt + 1));
     //問題を表す画像
-    // quizArea.find('.quiz_img').text(aryQuiz[quiz_cnt]['image']['url']);
+    quizArea.find('.quiz_img').empty();
     var img_element = document.createElement('img');
     img_element.src = aryQuiz[quiz_cnt]['image']['url']
-    img_element.width = 250;
-    img_element.height = 175;
-    quizArea.find('.quiz_img').empty();
+    img_element.width = 270;
+    img_element.height = 200;
     quizArea.find('.quiz_img').append(img_element);
     //問題文を表示
     quizArea.find('.quiz_question').text(aryQuiz[quiz_cnt]['question']);
