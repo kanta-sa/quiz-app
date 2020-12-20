@@ -12,11 +12,16 @@
   <% cnt = @words.length %>
   <% @words.each_with_index do |word, i| %>
     <div class="word-wrapper" id="slide-<%= i %>">
-      <div>
+      <div class="word-cnt">
         <%= i+1 %>/<%= cnt %>
       </div>
-      <div class="word-subject">
-        <%= word.subject %>
+      <div class="word-both">
+        <div class="word-img">
+          <%= image_tag word.image.to_s, class: "word-image" %>
+        </div>
+        <div class="word-subject">
+          <%= word.subject %>
+        </div>
       </div>
       <div class="word-meaning">
         <%= word.meaning_en %>
