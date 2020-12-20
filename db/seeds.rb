@@ -56,7 +56,8 @@ CSV.foreach('db/csv/words.csv') do |row|
     subject: subject,
     meaning_ja: meaning_ja,
     meaning_en: meaning_en,
-    level_id: level_id
+    level_id: level_id,
+    image: open("./db/fixtures/rails.png")
   )
 end
 
