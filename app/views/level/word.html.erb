@@ -19,12 +19,12 @@
         <div class="word-img">
           <%= image_tag word.image.to_s, class: "word-image" %>
         </div>
-        <div class="word-subject">
-          <%= word.subject %>
+        <div class="word-meaning">
+          <%= word.meaning_ja %>
         </div>
       </div>
-      <div class="word-meaning">
-        <%= word.meaning_ja %>
+      <div class="word-subject">
+        <%= word.subject %>
       </div>
     </div>
   <% end %>

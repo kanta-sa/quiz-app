@@ -23,21 +23,21 @@
           height: 200px;
         }
       }
-      .word-subject{
-        font-size: 1.2rem;
-        margin: 1% 0 5%;
+      .word-meaning{
+        font-size: 1rem;
+        margin: 1% 0 10%;
       }
     }
-
-    .word-meaning{
+    .word-subject{
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
+      font-weight: bold;
     }
   }
 }
 
 .word-btn{
-  margin: 15% 5%;
+  margin: 10% 5%;
   display: flex;
   justify-content: space-between;
   .fas{
