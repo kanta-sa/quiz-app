@@ -1,40 +1,120 @@
-﻿1,1,レベル1,1,喜ぶ・喜び,be pleased / pleasure,bel,TRUE
-2,1,レベル1,1,喜ぶ・喜び,be pleased / pleasure,yaj,FALSE
-3,1,レベル1,1,喜ぶ・喜び,be pleased / pleasure,bej,FALSE
-4,1,レベル1,1,喜ぶ・喜び,be pleased / pleasure,chal,FALSE
-5,1,レベル1,2,学ぶ,learn,ghoj,TRUE
-6,1,レベル1,2,学ぶ,learn,jup,FALSE
-7,1,レベル1,2,学ぶ,learn,ghojmoH,FALSE
-8,1,レベル1,2,学ぶ,learn,Dal,FALSE
-9,1,レベル1,3,女性,female,IoD,FALSE
-10,1,レベル1,3,女性,female,be’,TRUE
-11,1,レベル1,3,女性,female,ghaj,FALSE
-12,1,レベル1,3,女性,female,ba’,FALSE
-13,1,レベル1,4,男性,male,Dun,FALSE
-14,1,レベル1,4,男性,male,IoD,TRUE
-15,1,レベル1,4,男性,male,IaD,FALSE
-16,1,レベル1,4,男性,male,nuv,FALSE
-17,1,レベル1,5,読む,read,Do’,FALSE
-18,1,レベル1,5,読む,read,Har,FALSE
-19,1,レベル1,5,読む,read,IaD,TRUE
-20,1,レベル1,5,読む,read,chal,FALSE
-21,1,レベル1,6,聞く,hear,be’,FALSE
-22,1,レベル1,6,聞く,hear,Ij,TRUE
-23,1,レベル1,6,聞く,hear,nuv,FALSE
-24,1,レベル1,6,聞く,hear,pag,FALSE
-25,1,レベル1,7,面白い,be interesting,Daj,TRUE
-26,1,レベル1,7,面白い,be interesting,bang,FALSE
-27,1,レベル1,7,面白い,be interesting,Dal,FALSE
-28,1,レベル1,7,面白い,be interesting,chup,FALSE
-29,1,レベル1,8,幸運,lucky,bIQ,FALSE
-30,1,レベル1,8,幸運,lucky,chuch,FALSE
-31,1,レベル1,8,幸運,lucky,ja’,FALSE
-32,1,レベル1,8,幸運,lucky,Do’,TRUE
-33,1,レベル1,9,信じる,believe,Del,FALSE
-34,1,レベル1,9,信じる,believe,Har,TRUE
-35,1,レベル1,9,信じる,believe,ngong,FALSE
-36,1,レベル1,9,信じる,believe,pag,FALSE
-37,1,レベル1,10,宇宙,universe,DaH,FALSE
-38,1,レベル1,10,宇宙,universe,yaj,FALSE
-39,1,レベル1,10,宇宙,universe,’u’,TRUE
-40,1,レベル1,10,宇宙,universe,bech,FALSE
+﻿1,1,レベル1,1,喜ぶ・喜び,be pleased,bel,TRUE,word5
+2,1,レベル1,1,喜ぶ・喜び,be pleased,yaj,FALSE,word5
+3,1,レベル1,1,喜ぶ・喜び,be pleased,bej,FALSE,word5
+4,1,レベル1,1,喜ぶ・喜び,be pleased,chal,FALSE,word5
+5,1,レベル1,2,学ぶ,learn,ghoj,TRUE,word18
+6,1,レベル1,2,学ぶ,learn,jup,FALSE,word18
+7,1,レベル1,2,学ぶ,learn,ghojmoH,FALSE,word18
+8,1,レベル1,2,学ぶ,learn,Dal,FALSE,word18
+9,1,レベル1,3,女性,woman,IoD,FALSE,word6
+10,1,レベル1,3,女性,woman,be’,TRUE,word6
+11,1,レベル1,3,女性,woman,ghaj,FALSE,word6
+12,1,レベル1,3,女性,woman,ba’,FALSE,word6
+13,1,レベル1,4,男性,man,Dun,FALSE,word25
+14,1,レベル1,4,男性,man,IoD,TRUE,word25
+15,1,レベル1,4,男性,man,IaD,FALSE,word25
+16,1,レベル1,4,男性,man,nuv,FALSE,word25
+17,1,レベル1,5,読む,read,Do’,FALSE,word23
+18,1,レベル1,5,読む,read,Har,FALSE,word23
+19,1,レベル1,5,読む,read,IaD,TRUE,word23
+20,1,レベル1,5,読む,read,chal,FALSE,word23
+21,1,レベル1,6,聞く,listen,be’,FALSE,word24
+22,1,レベル1,6,聞く,listen,Ij,TRUE,word24
+23,1,レベル1,6,聞く,listen,nuv,FALSE,word24
+24,1,レベル1,6,聞く,listen,pag,FALSE,word24
+25,1,レベル1,7,面白い,be interesting,Daj,TRUE,word12
+26,1,レベル1,7,面白い,be interesting,bang,FALSE,word12
+27,1,レベル1,7,面白い,be interesting,Dal,FALSE,word12
+28,1,レベル1,7,面白い,be interesting,chup,FALSE,word12
+29,1,レベル1,8,幸運に,be fortunate,bIQ,FALSE,word15
+30,1,レベル1,8,幸運に,be fortunate,chuch,FALSE,word15
+31,1,レベル1,8,幸運に,be fortunate,ja’,FALSE,word15
+32,1,レベル1,8,幸運に,be fortunate,Do’,TRUE,word15
+33,1,レベル1,9,信じる,believe,Del,FALSE,word20
+34,1,レベル1,9,信じる,believe,Har,TRUE,word20
+35,1,レベル1,9,信じる,believe,ngong,FALSE,word20
+36,1,レベル1,9,信じる,believe,pag,FALSE,word20
+37,1,レベル1,10,宇宙,universe,DaH,FALSE,word30
+38,1,レベル1,10,宇宙,universe,yaj,FALSE,word30
+39,1,レベル1,10,宇宙,universe,u’,TRUE,word30
+40,1,レベル1,10,宇宙,universe,bech,FALSE,word30
+41,2,レベル2,11,彼,he,maH,FALSE,word33
+42,2,レベル2,11,彼,he,ghaH,TRUE,word33
+43,2,レベル2,11,彼,he,Sop,FALSE,word33
+44,2,レベル2,11,彼,he,tlhIl,FALSE,word33
+45,2,レベル2,12,明日,tomorrow,wa’Hu’,FALSE,word57
+46,2,レベル2,12,明日,tomorrow,yIt,FALSE,word57
+47,2,レベル2,12,明日,tomorrow,wa’leS,TRUE,word57
+48,2,レベル2,12,明日,tomorrow,ram,FALSE,word57
+49,2,レベル2,13,楽しむ,enjoy,rut,FALSE,word51
+50,2,レベル2,13,楽しむ,enjoy,tIv,TRUE,word51
+51,2,レベル2,13,楽しむ,enjoy,tuj,FALSE,word51
+52,2,レベル2,13,楽しむ,enjoy,nuq,FALSE,word51
+53,2,レベル2,14,どこ？,where,nuqDaq,TRUE,word44
+54,2,レベル2,14,どこ？,where,ghorgh,FALSE,word44
+55,2,レベル2,14,どこ？,where,’Iv,FALSE,word44
+56,2,レベル2,14,どこ？,where,chay’,FALSE,word44
+57,2,レベル2,15,尋ねる,ask,tlhob,TRUE,word54
+58,2,レベル2,15,尋ねる,ask,DuSaQ,FALSE,word54
+59,2,レベル2,15,尋ねる,ask,yIt,FALSE,word54
+60,2,レベル2,15,尋ねる,ask,jaH,FALSE,word54
+61,3,レベル3,16,知っている,know,nob,FALSE,word50
+62,3,レベル3,16,知っている,know,tlhob,FALSE,word50
+63,3,レベル3,16,知っている,know,Sop,FALSE,word50
+64,3,レベル3,16,知っている,know,Sov,TRUE,word50
+65,3,レベル3,17,明るい,bright,ghojwI’,FALSE,word58
+66,3,レベル3,17,明るい,bright,ghom,FALSE,word58
+67,3,レベル3,17,明るい,bright,wov,TRUE,word58
+68,3,レベル3,17,明るい,bright,tIv,FALSE,word58
+69,3,レベル3,18,いいえ,no,jIH,FALSE,word45
+70,3,レベル3,18,いいえ,no,Qo’,TRUE,word45
+71,3,レベル3,18,いいえ,no,HIja,FALSE,word45
+72,3,レベル3,18,いいえ,no,SoH,FALSE,word45
+73,3,レベル3,19,私,I,tlhutlh,FALSE,word40
+74,3,レベル3,19,私,I,jIH,TRUE,word40
+75,3,レベル3,19,私,I,wa’Hu’,FALSE,word40
+76,3,レベル3,19,私,I,maH,FALSE,word40
+77,3,レベル3,20,行く,go,jaH,TRUE,word39
+78,3,レベル3,20,行く,go,tuj,FALSE,word39
+79,3,レベル3,20,行く,go,ghom,FALSE,word39
+80,3,レベル3,20,行く,go,Hoch,FALSE,word39
+81,3,レベル3,21,戦略,strategy,Dup,TRUE,word64
+82,3,レベル3,21,戦略,strategy,batlh,FALSE,word64
+83,3,レベル3,21,戦略,strategy,ghol,FALSE,word64
+84,3,レベル3,21,戦略,strategy,jIp,FALSE,word64
+85,3,レベル3,22,話す,speak,maj,FALSE,word67
+86,3,レベル3,22,話す,speak,jatlh,TRUE,word67
+87,3,レベル3,22,話す,speak,muS,FALSE,word67
+88,3,レベル3,22,話す,speak,mu’,FALSE,word67
+89,3,レベル3,23,勝利,victory,yay,TRUE,word88
+90,3,レベル3,23,勝利,victory,roj,FALSE,word88
+91,3,レベル3,23,勝利,victory,’Ip,FALSE,word88
+92,3,レベル3,23,勝利,victory,tuQ,FALSE,word88
+93,3,レベル3,24,妨害・干渉,hinder,pIH,FALSE,word79
+94,3,レベル3,24,妨害・干渉,hinder,qeq,FALSE,word79
+95,3,レベル3,24,妨害・干渉,hinder,nIS,TRUE,word79
+96,3,レベル3,24,妨害・干渉,hinder,lIH,FALSE,word79
+97,3,レベル3,25,科学,science,tlhIngan,FALSE,word83
+98,3,レベル3,25,科学,science,jeQ,FALSE,word83
+99,3,レベル3,25,科学,science,jIj,FALSE,word83
+100,3,レベル3,25,科学,science,QeD,TRUE,word83
+101,3,レベル3,26,驚き,surprise,mer,TRUE,word76
+102,3,レベル3,26,驚き,surprise,cha,FALSE,word76
+103,3,レベル3,26,驚き,surprise,Huch,FALSE,word76
+104,3,レベル3,26,驚き,surprise,maj,FALSE,word76
+105,3,レベル3,27,競う,compete,loS,FALSE,word90
+106,3,レベル3,27,競う,compete,lop,FALSE,word90
+107,3,レベル3,27,競う,compete,’ov,TRUE,word90
+108,3,レベル3,27,競う,compete,lIj,FALSE,word90
+109,3,レベル3,28,寒い,be cold,muS,FALSE,word62
+110,3,レベル3,28,寒い,be cold,bIr,TRUE,word62
+111,3,レベル3,28,寒い,be cold,’Ip,FALSE,word62
+112,3,レベル3,28,寒い,be cold,Qoy,FALSE,word62
+113,3,レベル3,29,分析,analysis,poj,TRUE,word81
+114,3,レベル3,29,分析,analysis,qeq,FALSE,word81
+115,3,レベル3,29,分析,analysis,Huch,FALSE,word81
+116,3,レベル3,29,分析,analysis,Dup,FALSE,word81
+117,3,レベル3,30,紹介,introduce,batlh,FALSE,word71
+118,3,レベル3,30,紹介,introduce,roj,FALSE,word71
+119,3,レベル3,30,紹介,introduce,lIH,TRUE,word71
+120,3,レベル3,30,紹介,introduce,Saw,FALSE,word71

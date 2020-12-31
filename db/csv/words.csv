@@ -1,30 +1,90 @@
-﻿1,1,bang,愛・愛されている人,love / one who is loved
-2,1,ba’,座る,sit
-3,1,bech,苦しむ,suffer
-4,1,bej,見る,watch
-5,1,bel,喜ぶ・喜び,be pleased / plesure
-6,1,be’,女性,female
-7,1,bIQ,水,water
-8,1,chal,空,sky
-9,1,chuch,氷,ice
-10,1,chup,推奨・提案,recommend
-11,1,DaH,今,now
-12,1,Daj,面白い,be interesting
-13,1,Dal,つまらない,be dull
-14,1,Del,説明,describe
-15,1,Do’,幸運,lucky
-16,1,Dun,素晴らしい,be wonderful
-17,1,ghaj,持っている,have
-18,1,ghoj,学ぶ,learn
-19,1,ghojmoH,教える,teach
-20,1,Har,信じる,believe
-21,1,ja’,伝える・報告する,tell / report
-22,1,jup,友達,friend
-23,1,IaD,読む,read
-24,1,Ij,聞く,hear
-25,1,IoD,男性,male
-26,1,nuv,人(人型),person
-27,1,ngong,実験,experiment
-28,1,pag,本,book
-29,1,yaj,理解する,understand
-30,1,’u’,宇宙,universe
+﻿1,1,bang,愛,love,word1
+2,1,ba’,座る,sit,word2
+3,1,bech,苦しむ,suffer,word3
+4,1,bej,見る,watch,word4
+5,1,bel,喜ぶ，喜び,be pleased,word5
+6,1,be’,女性,woman,word6
+7,1,bIQ,水,water,word7
+8,1,chal,空,sky,word8
+9,1,chuch,氷,ice,word9
+10,1,chup,推奨・提案,recommend,word10
+11,1,DaH,今,now,word11
+12,1,Daj,面白い,be interesting,word12
+13,1,Dal,つまらない,be boring,word13
+14,1,Del,説明,desribe,word14
+15,1,Do’,幸運に,be fortunate,word15
+16,1,Dun,素晴らしい,great,word16
+17,1,ghaj,持っている,have,word17
+18,1,ghoj,学ぶ,learn,word18
+19,1,ghojmoH,教える,teach,word19
+20,1,Har,信じる,believe,word20
+21,1,ja’,伝える，報告する,tell,word21
+22,1,jup,友達,friend,word22
+23,1,laD,読む,read,word23
+24,1,’Ij,聞く,listen,word24
+25,1,loD,男性,man,word25
+26,1,nuv,人(人型),person,word26
+27,1,ngong,実験,experiment,word27
+28,1,paq,本,book,word28
+29,1,yaj,理解する,understand,word29
+30,1,’u’,宇宙,universe,word30
+31,2,chay’,どうやって？,how,word31
+32,2,DuSaQ,学校,school,word32
+33,2,ghaH,彼,he,word33
+34,2,ghojwI’,学生,student,word34
+35,2,ghom,会う・出会う・集まる,meet,word35
+36,2,ghorgh,いつ？,when,word36
+37,2,Hija’,はい,yes,word37
+38,2,Hoch,みんな・すべて,everyone,word38
+39,2,jaH,行く,go,word39
+40,2,jIH,私,I,word40
+41,2,maH,私たち,we,word41
+42,2,nob,与える,give,word42
+43,2,nuq,何？,what,word43
+44,2,nuqDaq,どこ？,where,word44
+45,2,Qo’,いいえ,no,word45
+46,2,ram,夜,night,word46
+47,2,rut,時々,sometimes,word47
+48,2,SoH,あなた,you,word48
+49,2,Sop,食べる,eat,word49
+50,2,Sov,知っている,know,word50
+51,2,tIv,楽しむ,enjoy,word51
+52,2,tuj,暑い,be hot,word52
+53,2,tlhIl,私の,mine,word53
+54,2,tlhob,尋ねる,ask,word54
+55,2,tlhutlh,飲み物,drink,word55
+56,2,wa’Hu’,昨日,yesterday,word56
+57,2,wa’leS,明日,tomorrow,word57
+58,2,wov,明るい,bright,word58
+59,2,yIt,歩く,walk,word59
+60,2,’Iv,誰？,who,word60
+61,3,batlh,名誉,honor,word61
+62,3,bIr,寒い,be cold,word62
+63,3,cha,魚雷,torpedoes,word63
+64,3,Dup,戦略,strategy,word64
+65,3,ghol,敵,opponent,word65
+66,3,Huch,お金,money,word66
+67,3,jatlh,話す,speak,word67
+68,3,jeQ,自信がある,be self-confident,word68
+69,3,jIj,協力する,cooperate,word69
+70,3,jIp,ペナルティ,penalty,word70
+71,3,lIH,紹介,introduce,word71
+72,3,lIj,忘れる,forget,word72
+73,3,lop,祝う,celebrate,word73
+74,3,loS,待つ,wait,word74
+75,3,maj,良い,good,word75
+76,3,mer,驚き,surprise,word76
+77,3,muS,嫌い,hate,word77
+78,3,mu’,単語,word,word78
+79,3,nIS,妨害・干渉,hinder,word79
+80,3,pIH,期待する,expect,word80
+81,3,poj,分析,analysis,word81
+82,3,qeq,練習・訓練・準備,practice,word82
+83,3,QeD,科学,science,word83
+84,3,roj,平和,peace,word84
+85,3,Saw,結婚する,marry,word85
+86,3,tuQ,着る,wear,word86
+87,3,tlhIngan,クリンゴン帝国,wo' Klingon Empire,word87
+88,3,yay,勝利,victory,word88
+89,3,’Ip,誓う,vow,word89
+90,3,’or,競う,compete,word90
