@@ -81,3 +81,10 @@
     color: black;
   }
 }
+
+@media (max-width: 700px){
+  .screen-area{
+    height: 100%;
+    max-width: 100%;
+  }
+}
