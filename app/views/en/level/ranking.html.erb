@@ -8,25 +8,27 @@
   <% end %>
 </div>
 
-<div class="owner-rank-wrapper">
-  <div class="owner-rank-content">
-    <div class="">
-      <%= @own_rank %>
-    </div>
-    <div class="user_name">
-      <%= @owner.user.username %>
-    </div>
-    <% if @owner.score == 1 %>
+<% unless @owner.nil? %>
+  <div class="owner-rank-wrapper">
+    <div class="owner-rank-content">
       <div class="">
-        <%= @owner.score %> point
+        <%= @own_rank %>
       </div>
-    <% else %>
-      <div class="">
-        <%= @owner.score %> points
+      <div class="user_name">
+        <%= @owner.user.username %>
       </div>
-    <% end %>
+      <% if @owner.score == 1 %>
+        <div class="">
+          <%= @owner.score %> point
+        </div>
+      <% else %>
+        <div class="">
+          <%= @owner.score %> points
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>
 
 <div class="ranking-wrapper">
   <% @ranks.each_with_index do |rank, i| %>
