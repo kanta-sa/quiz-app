@@ -2,19 +2,21 @@
   ランキング/<%= @level.name %>
 </header>
 
-<div class="owner-rank-wrapper">
-  <div class="owner-rank-content">
-    <div class="">
-      <%= @own_rank %>
-    </div>
-    <div class="user_name">
-      <%= @owner.user.username %>
-    </div>
-    <div class="">
-      <%= @owner.score %>点
+<% unless @owner.nil? %>
+  <div class="owner-rank-wrapper">
+    <div class="owner-rank-content">
+      <div class="">
+        <%= @own_rank %>
+      </div>
+      <div class="user_name">
+        <%= @owner.user.username %>
+      </div>
+      <div class="">
+        <%= @owner.score %>点
+      </div>
     </div>
   </div>
-</div>
+<% end %>
 
 <div class="ranking-wrapper">
   <% @ranks.each_with_index do |rank, i| %>
