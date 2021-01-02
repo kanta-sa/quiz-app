@@ -2,6 +2,12 @@
   ランキング/<%= @level.name %>
 </header>
 
+<div class="back">
+  <%= link_to rankings_path, class: 'nav-link' do %>
+    <div><i class="fas fa-arrow-left"></i>戻る</div>
+  <% end %>
+</div>
+
 <% unless @owner.nil? %>
   <div class="owner-rank-wrapper">
     <div class="owner-rank-content">
