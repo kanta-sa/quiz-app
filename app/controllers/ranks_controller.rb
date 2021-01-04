@@ -1,4 +1,6 @@
 class RanksController < ApplicationController
+  before_action :authenticate_user!
+
   def create
     @rank = Rank.new(level_id: params[:rank][:level_id], user_id: params[:rank][:user_id], score: params[:rank][:score])
     if @rank.save

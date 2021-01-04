@@ -1,4 +1,6 @@
 class En::TestsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @level = Level.all
   end
