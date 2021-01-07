@@ -3,7 +3,7 @@ class LevelController < ApplicationController
 
   def question
     @level = Level.find_by(id: params[:id])
-    @questions = @level.questions
+    @questions = @level.questions.shuffle
     @choices = @questions.map{ |question| question.choices }
     if Rank.exists?(level_id: @level.id, user_id: current_user.id)
       @rank = Rank.find_by(level_id: @level.id, user_id: current_user.id)
