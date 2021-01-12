@@ -31,7 +31,9 @@
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :score, id: 'score' %>
     <%= f.hidden_field :type, value: 'ja' %>
-    <%= f.submit "記録する", class: 'btn btn-blue' %>
+    <div class="right-btn">
+      <%= f.submit "記録する", class: 'btn btn-blue' %>
+    </div>
   <% end  %>
 </div>
 
