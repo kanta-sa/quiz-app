@@ -68,14 +68,10 @@ CSV.foreach('db/csv/words.csv') do |row|
   )
 end
 
-(1..3).map do |i|
+(1..10).map do |i|
   User.create!(username: "ユーザー#{i}",
                email: "user#{i}@example.com",
                password: 'password',
                password_confirmation: 'password'
   )
-end
-
-(1..3).map do |i|
-  Level.find_or_create_by(name: "レベル#{i}")
 end
